@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // webpack 모듈 설정
 module.exports = {
   mode: "development", // 개발용:development, 실제:production
@@ -26,10 +26,10 @@ module.exports = {
       {
         test: /\.(sc|c)ss$/, // scss나 css인 확장자 파일
         use: [
-          "cache-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
+          MiniCssExtractPlugin.loader, // js 파일에서 css 파일들을 분리한다.
+
+          "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
+          "sass-loader", // Sass/SCSS 파일들을 css 파일로 컴파일해준다.
         ], // 위 확장자의 파일을 읽을 loader들
       },
     ],
