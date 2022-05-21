@@ -13,16 +13,6 @@ module.exports = {
   entry: {
     bundle: ["./src/index"],
   }, // 입력
-  output: {
-    path: path.join(__dirname, "dist"), // __dirname: 현재 실행 중인 폴더 경로
-    filename: "[name].js",
-  }, // 출력
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
-  ],
   module: {
     rules: [
       {
@@ -35,4 +25,14 @@ module.exports = {
       },
     ],
   },
+  output: {
+    path: path.join(__dirname, "dist"), // __dirname: 현재 실행 중인 폴더 경로
+    filename: "[name].js",
+  }, // 출력
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };
