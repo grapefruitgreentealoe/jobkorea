@@ -23,6 +23,15 @@ module.exports = {
           presets: ["@babel/preset-env", "@babel/preset-react"], // babel-loader에서 사용할 옵션
         },
       },
+      {
+        test: /\.(sc|c)ss$/, // scss나 css인 확장자 파일
+        use: [
+          "cache-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ], // 위 확장자의 파일을 읽을 loader들
+      },
     ],
   },
   output: {
@@ -34,10 +43,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     allowedHosts: "auto",
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
-    hot: true,
+    hot: true, //Enable webpack's Hot Module Replacement feature:
   },
 };
