@@ -4,15 +4,20 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // webpack 모듈 설정
 module.exports = {
-  mode: "development", // 개발용:development, 실제:production
-  devtool: "eval", // 소스맵 관련 옵션
+  devtool: "eval", //  : source-map을 설정하는 부분으로 에러가 발생했을 때 번들링된 파일에서 어느 부분에 에러가 났는지를 쉽게 확인할 수 있게 해주는 도구  "eval-cheap-source-map",
   resolve: {
     extensions: [".js", ".jsx"],
   }, // webpack으로 읽을 파일들의 확장자
 
   entry: {
-    bundle: ["./src/index"],
+    bundle: {
+      main: "./src/index.js", //
+    },
   }, // 입력
+  resolve: {
+    // 웹팩이 모듈을 처리하는 방식 정의하는 것으로 확장자를 생략하고도 인식하게 만든다.
+    extensions: [".js", ".jsx"],
+  },
   module: {
     rules: [
       {
@@ -30,7 +35,15 @@ module.exports = {
 
           "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
           "sass-loader", // Sass/SCSS 파일들을 css 파일로 컴파일해준다.
+          "style-loader", //변환된 CSS 파일을 <style> 태그로 감싸서 삽입
         ], // 위 확장자의 파일을 읽을 loader들
+      },
+      {
+        test: /\.jfif$/,
+        loader: "file-loader", //이미지 및 폰트 등의 파일 로딩
+        options: {
+          name: "[name].[ext]",
+        },
       },
     ],
   },
@@ -48,6 +61,7 @@ module.exports = {
   devServer: {
     allowedHosts: "auto",
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
-    hot: true, //Enable webpack's Hot Module Replacement feature:
+    hot: true, //Enable webpack's Hot Module Replacement feature:\
+    writeToDisk: true, //writeToDisk 는 메모리 뿐만 아니라 직접 파일로 만들 것인지에 대한 옵션이다.
   },
 };
