@@ -10,9 +10,7 @@ module.exports = {
   }, // webpack으로 읽을 파일들의 확장자
 
   entry: {
-    bundle: {
-      main: "./src/index.js", //
-    },
+    bundle: ["./src/index.js"],
   }, // 입력
   resolve: {
     // 웹팩이 모듈을 처리하는 방식 정의하는 것으로 확장자를 생략하고도 인식하게 만든다.
@@ -62,6 +60,10 @@ module.exports = {
     allowedHosts: "auto",
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
     hot: true, //Enable webpack's Hot Module Replacement feature:\
-    writeToDisk: true, //writeToDisk 는 메모리 뿐만 아니라 직접 파일로 만들 것인지에 대한 옵션이다.
+  },
+  externals: {
+    //Prevent bundling of certain imported packages and instead retrieve these external dependencies at runtime.
+    // react: "React",
+    // "react-dom": "ReactDOM",
   },
 };
