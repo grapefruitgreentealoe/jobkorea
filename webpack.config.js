@@ -35,4 +35,9 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
+  devServer: {
+    allowedHosts: "auto",
+    publicPath: "/", // 번들 파일을 사용할 브라우저 경로
+    open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
+  },
 };
