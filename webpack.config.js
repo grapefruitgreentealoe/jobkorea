@@ -38,5 +38,6 @@ module.exports = {
   devServer: {
     allowedHosts: "auto",
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
+    hot: true,
   },
 };
