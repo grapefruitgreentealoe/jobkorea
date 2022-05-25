@@ -60,6 +60,7 @@ module.exports = {
     allowedHosts: "auto",
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
     hot: true, //Enable webpack's Hot Module Replacement feature:\
+    historyApiFallback: true, //react-router-dom html5 refresh bug fix
   },
   externals: {
     //Prevent bundling of certain imported packages and instead retrieve these external dependencies at runtime.
