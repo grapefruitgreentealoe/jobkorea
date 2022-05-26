@@ -1,15 +1,25 @@
 .listview {
   height: 80vh;
   border: 1px black solid;
-
 }
 
 .listElements {
-   height: 80vh;
+  height: 80vh;
   overflow-y: scroll;
-    position: relative;
+  position: relative;
 }
 .listElement {
   display: grid;
-  grid-template-columns: 2fr 1fr 5fr 2fr 1fr;
+  grid-template-columns: 2fr 1fr 6fr 2fr 1fr;
+  justify-items: center;
+  border-bottom: 1px black solid;
+}
+.reviewDetail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: flex-end;
+}
+
+.toggleButton {
 }
