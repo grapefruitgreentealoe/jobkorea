@@ -7,6 +7,7 @@ export default function JoinInput({
   setJoinInfo,
   type,
   joinInfo,
+  visible,
 }) {
   const handleonChange = (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ export default function JoinInput({
         placeholder={placeholder}
         onChange={handleonChange}
         value={joinInfo[type]}
+        type={type == "password" ? visible : "text"}
       ></input>
       {children}
     </div>

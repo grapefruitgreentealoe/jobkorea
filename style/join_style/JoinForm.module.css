@@ -2,10 +2,11 @@
   color: red;
   width: 50vw;
   height: 50vh;
-  padding-top: 15vh;
+  padding-top: 12vh;
   left: 25%;
   position: relative;
   display: block;
+  font-size: xx-large;
 }
 
 .joinInput {
@@ -20,8 +21,13 @@
 .joinInputNButton {
   display: flex;
   width: 50vw;
+  height: 2em;
 }
 
 .visibleButton {
   width: 20%;
+}
+
+.visibleButton span{
+  font-size: x-large;
 }
