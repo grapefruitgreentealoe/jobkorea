@@ -5,10 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // webpack 모듈 설정
 module.exports = {
   devtool: "eval", //  : source-map을 설정하는 부분으로 에러가 발생했을 때 번들링된 파일에서 어느 부분에 에러가 났는지를 쉽게 확인할 수 있게 해주는 도구  "eval-cheap-source-map",
-  resolve: {
-    extensions: [".js", ".jsx"],
-  }, // webpack으로 읽을 파일들의 확장자
-
   entry: {
     bundle: ["./src/index.js"],
   }, // 입력
@@ -26,15 +22,40 @@ module.exports = {
           presets: ["@babel/preset-env", "@babel/preset-react"], // babel-loader에서 사용할 옵션
         },
       },
+      // {
+      //   test: /\.(sc|c)ss$/, // scss나 css인 확장자 파일
+      //   use: [
+      //     MiniCssExtractPlugin.loader, // js 파일에서 css 파일들을 분리한다.
+
+      //     "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
+      //     "sass-loader", // Sass/SCSS 파일들을 css 파일로 컴파일해준다.
+      //     "style-loader", //변환된 CSS 파일을 <style> 태그로 감싸서 삽입
+      //   ], // 위 확장자의 파일을 읽을 loader들
+      // },
+      // CSS 모듈
+      {
+        test: /\.css$/, //css인 확장자 파일
+        use: [
+          "style-loader", //변환된 CSS 파일을 <style> 태그로 감싸서 삽입
+          {
+            loader: "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ],
+        include: /\.module\.css$/,
+      },
+      // CSS or SCSS
       {
         test: /\.(sc|c)ss$/, // scss나 css인 확장자 파일
         use: [
-          MiniCssExtractPlugin.loader, // js 파일에서 css 파일들을 분리한다.
-
-          "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
+          MiniCssExtractPlugin.loader,
+          "css-loader",
           "sass-loader", // Sass/SCSS 파일들을 css 파일로 컴파일해준다.
-          "style-loader", //변환된 CSS 파일을 <style> 태그로 감싸서 삽입
-        ], // 위 확장자의 파일을 읽을 loader들
+        ],
+        exclude: /\.module\.css$/,
       },
       {
         test: /\.jfif$/,
@@ -61,10 +82,5 @@ module.exports = {
     open: true, // dev-server로 실행시 브라우저로 바로 열리도록 하는 설정
     hot: true, //Enable webpack's Hot Module Replacement feature:\
     historyApiFallback: true, //react-router-dom html5 refresh bug fix
-  },
-  externals: {
-    //Prevent bundling of certain imported packages and instead retrieve these external dependencies at runtime.
-    // react: "React",
-    // "react-dom": "ReactDOM",
   },
 };
