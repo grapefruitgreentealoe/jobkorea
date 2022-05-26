@@ -6,16 +6,12 @@ import FormButton from "./FormButton";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export default function JoinFormSection() {
-  const [joinInfo, setJoinInfo] = useState({
-    id: "",
-    password: "",
-    fullname: "",
-    email: "",
-    phone: "",
-    validate: "",
-  });
-  const [visible, setVisible] = useState("password");
+export default function JoinFormSection({
+  joinInfo,
+  setJoinInfo,
+  visible,
+  setVisible,
+}) {
   const formArray = [
     ["id", "아이디"],
     [
@@ -28,9 +24,7 @@ export default function JoinFormSection() {
     ["phone", "휴대폰번호", <FormButton buttonName="인증번호받기" />],
     ["validate", "인증번호", <FormButton buttonName="확인" />],
   ];
-  useEffect(() => {
-    console.log(joinInfo);
-  }, [joinInfo]);
+
   return (
     <div className={style.joinform}>
       {formArray.map((x) => (

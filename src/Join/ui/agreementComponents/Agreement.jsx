@@ -6,7 +6,6 @@ export default function Agreement({
   setCheck,
   num,
   checked,
-  setAll,
 }) {
   const handleCheck = (e) => {
     setCheck(e.target.id);

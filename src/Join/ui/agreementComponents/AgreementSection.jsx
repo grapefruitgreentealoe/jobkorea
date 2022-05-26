@@ -3,10 +3,14 @@ import { useState, useEffect } from "react";
 
 import styles from "../../../../style/join_style/Agreement.module.css";
 import Agreement from "./Agreement";
-export default function AgreementSection() {
-  const [all, setAll] = useState(false);
-  const [essential, setEssential] = useState(Array(3).fill(false));
-  const [selectable, setSelectable] = useState(Array(2).fill(false));
+export default function AgreementSection({
+  all,
+  setAll,
+  essential,
+  setEssential,
+  selectable,
+  setSelectable,
+}) {
   const handleAllCheck = () => {
     setAll((old) => !old);
     if (all) {
