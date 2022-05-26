@@ -6,12 +6,12 @@ import PersonalInfoSection from "./Join/ui/PersonalInfoSection";
 import SubmitButton from "./Join/ui/SubmitButton";
 export default function Join() {
   return (
-    <>
+    <div>
       <Navbar />
       <JoinFormSection />
       <AgreementSection />
       <PersonalInfoSection />
       <SubmitButton />
-    </>
+    </div>
   );
 }

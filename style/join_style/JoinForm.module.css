@@ -1,3 +1,27 @@
 .joinform {
   color: red;
+  width: 50vw;
+  height: 50vh;
+  padding-top: 15vh;
+  left: 25%;
+  position: relative;
+  display: block;
+}
+
+.joinInput {
+  font-weight: bold;
+  display: block;
+  width: 100%;
+}
+
+.joinButton {
+  width: 20%;
+}
+.joinInputNButton {
+  display: flex;
+  width: 50vw;
+}
+
+.visibleButton {
+  width: 20%;
 }
