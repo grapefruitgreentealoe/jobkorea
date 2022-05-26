@@ -17,6 +17,7 @@
 
 .joinButton {
   width: 20%;
+  cursor: pointer;
 }
 .joinInputNButton {
   display: flex;
@@ -26,8 +27,9 @@
 
 .visibleButton {
   width: 20%;
+  cursor: pointer;
 }
 
-.visibleButton span{
+.visibleButton span {
   font-size: x-large;
 }

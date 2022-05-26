@@ -14,6 +14,7 @@ export default function Agreement({
   return (
     <div className={styles.agreement}>
       <input
+        className={styles.checkbox}
         type="checkbox"
         id={num}
         onChange={handleCheck}

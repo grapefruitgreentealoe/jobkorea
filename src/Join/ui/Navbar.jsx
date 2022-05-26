@@ -1,12 +1,12 @@
 import React from "react";
-import style from "../../../style/join_style/Navbar.module.css";
+import styles from "../../../style/join_style/Navbar.module.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className={style.navbar}>
-        <div className={style.hamburger}>&#9776;</div>
-        <div className={style.logo}>Logo</div>
-        <div className={style.switch}>d</div>
+      <nav className={styles.navbar}>
+        <button className={styles.hamburger}>&#9776;</button>
+        <div className={styles.logo}>Logo</div>
+        <button className={styles.search}>d</button>
       </nav>
     </div>
   );

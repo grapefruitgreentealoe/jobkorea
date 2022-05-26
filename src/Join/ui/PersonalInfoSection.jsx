@@ -18,6 +18,7 @@ export default function PersonalInfoSection() {
       {period.map((x) => (
         <div className={styles.personalInfo}>
           <input
+            className={styles.radio}
             type="radio"
             name={x}
             onChange={handleRadio}

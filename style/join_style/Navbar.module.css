@@ -15,9 +15,13 @@
 
 .hambuger {
   justify-self: start;
+  cursor: pointer;
+  opacity: 1;
 }
-.switch {
+.search {
   justify-self: end;
+  cursor: pointer;
+  opacity: 1;
 }
 .logo {
   justify-self: start;

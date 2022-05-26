@@ -11,3 +11,7 @@
 .agreement .selectable {
   color: gray;
 }
+
+.checkbox {
+  cursor: pointer;
+}

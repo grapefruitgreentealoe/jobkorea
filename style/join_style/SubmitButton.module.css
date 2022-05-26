@@ -1,3 +1,15 @@
 .submitButton {
-  color: blueviolet;
+  display: block;
+  width: 50vw;
+  height: 10vh;
+  left: 25%;
+  background-color: rgb(200, 200, 200);
+  position: relative;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton span {
+  font-size: xx-large;
 }
