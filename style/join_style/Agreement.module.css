@@ -1,3 +1,13 @@
-.agreement {
+.agreements {
+  display: block;
+  width: 50vw;
+  left: 25%;
+  position: relative;
+}
+
+.agreement .essential {
   color: red;
+}
+.agreement .selectable {
+  color: gray;
 }
