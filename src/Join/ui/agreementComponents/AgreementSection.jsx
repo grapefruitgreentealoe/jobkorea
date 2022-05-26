@@ -26,10 +26,6 @@ export default function AgreementSection() {
     setSelectable(selectable.map((x, i) => (i == num ? !x : x)));
   };
 
-  useEffect(() => {
-    console.log(all, essential, selectable);
-  }, [all, essential, selectable]);
-
   const allMent = [
     "필수동의항목 및 개인정보수집 및 이용동의(선택), 광고성 정보 수신 동의(선택)에 전체 동의합니다.",
   ];
