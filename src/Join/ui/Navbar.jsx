@@ -1,5 +1,13 @@
 import React from "react";
-import style from "../../../style/join_style/Navbar.module.css";
+import styles from "../../../style/join_style/Navbar.module.css";
 export default function Navbar() {
-  return <div className={style.navbar}>네이게이션입니다</div>;
+  return (
+    <div className={styles.navbarWrapper}>
+      <nav className={styles.navbar}>
+        <div className={styles.hamburger}>&#9776;</div>
+        <div className={styles.logo}>개인회원 가입</div>
+        <div className={styles.search}>🔍</div>
+      </nav>
+    </div>
+  );
 }

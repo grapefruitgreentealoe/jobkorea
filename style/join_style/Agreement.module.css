@@ -1,3 +1,17 @@
-.agreement {
+.agreements {
+  display: block;
+  width: 500px;
+  position: relative;
+  padding: 10px;
+}
+
+.agreement .essential {
   color: red;
+}
+.agreement .selectable {
+  color: gray;
+}
+
+.checkbox {
+  cursor: pointer;
 }

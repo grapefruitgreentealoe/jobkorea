@@ -1,3 +1,15 @@
-.personal{
-    color: aquamarine;
+.personalSection {
+  display: block;
+  width: 500px;
+  position: relative;
+    padding: 10px;
+}
+
+.personalInfo {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+.radio {
+  cursor: pointer;
 }

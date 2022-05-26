@@ -1,3 +1,30 @@
-.navbar{
-    color: blue;
+.navbarWrapper {
+  position: relative;
+}
+.navbar {
+  width: 500px;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  padding: 1px 30px;
+  background-color: rgb(200, 200, 200);
+  color: black;
+  font-size: xx-large;
+}
+
+.hamburger {
+  justify-self: start;
+  cursor: pointer;
+}
+.logo {
+  justify-self: start;
+  font-size: large;
+}
+
+.search {
+  justify-self: end;
+  cursor: pointer;
 }
