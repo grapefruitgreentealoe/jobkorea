@@ -1,18 +1,19 @@
 .joinform {
   color: red;
-  width: 50vw;
+  width: 500px;
   height: 50vh;
-  padding-top: 12vh;
-  left: 25%;
   position: relative;
   display: block;
   font-size: xx-large;
+  padding: 12vh 10px 0 10px;
 }
 
 .joinInput {
-  font-weight: bold;
   display: block;
   width: 100%;
+  font-size: 0.6em;
+  border: none;
+  border-bottom: 1px gray solid;
 }
 
 .joinButton {
@@ -21,13 +22,14 @@
 }
 .joinInputNButton {
   display: flex;
-  width: 50vw;
   height: 2em;
 }
 
 .visibleButton {
   width: 20%;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .visibleButton span {

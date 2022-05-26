@@ -1,8 +1,12 @@
+.submitButtonWrapper {
+  position: relative;
+  width: 500px;
+}
+
 .submitButton {
   display: block;
-  width: 50vw;
+  width: 500px;
   height: 10vh;
-  left: 25%;
   background-color: rgb(200, 200, 200);
   position: relative;
   box-shadow: none;
@@ -11,5 +15,5 @@
 }
 
 .submitButton span {
-  font-size: xx-large;
+  font-size: x-large;
 }

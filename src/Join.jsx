@@ -5,6 +5,7 @@ import AgreementSection from "./Join/ui/agreementComponents/AgreementSection";
 import PersonalInfoSection from "./Join/ui/PersonalInfoSection";
 import SubmitButton from "./Join/ui/SubmitButton";
 import formValidation from "./Join/formValidation/formValidation";
+import style from "../style/join_style/JoinPage.module.css";
 export default function Join() {
   const [joinInfo, setJoinInfo] = useState({
     id: "",
@@ -30,7 +31,7 @@ export default function Join() {
   };
 
   return (
-    <div>
+    <div className={style.joinPage}>
       <form id="joinForm" onSubmit={handleSubmitButton}>
         <Navbar />
         <JoinFormSection
@@ -40,7 +41,7 @@ export default function Join() {
           setVisible={setVisible}
         />
         <AgreementSection
-          all={all} 
+          all={all}
           setAll={setAll}
           essential={essential}
           setEssential={setEssential}

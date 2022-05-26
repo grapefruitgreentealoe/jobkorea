@@ -10,7 +10,7 @@ export default function PersonalInfoSection({ periodRadio, setPeriodRadio }) {
 
   return (
     <div className={styles.personalSection}>
-      <h3>개인정보 유효기간</h3>
+      <h3>개인정보 유효기간 ？</h3>
       {period.map((x) => (
         <div key={x} className={styles.personalInfo}>
           <input

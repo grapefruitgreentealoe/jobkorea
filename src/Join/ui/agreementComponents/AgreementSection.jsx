@@ -45,42 +45,40 @@ export default function AgreementSection({
 
   return (
     <div className={styles.agreements}>
-      <ul>
-        <h3>약관동의</h3>
+      <h3>약관동의</h3>
+      <Agreement
+        type={null}
+        ment={allMent}
+        setCheck={handleAllCheck}
+        num={0}
+        key={allMent[0]}
+        checked={all}
+        setAll={setAll}
+      />
+      <hr />
+      {essentialMentArray.map((v, i) => (
         <Agreement
-          type={null}
-          ment={allMent}
-          setCheck={handleAllCheck}
-          num={0}
-          key={allMent[0]}
-          checked={all}
+          key={v}
+          type={"essential"}
+          ment={v}
+          setCheck={handleEssentialCheck}
+          num={i}
+          checked={essential[i]}
           setAll={setAll}
         />
-        <hr />
-        {essentialMentArray.map((v, i) => (
-          <Agreement
-            key={v}
-            type={"essential"}
-            ment={v}
-            setCheck={handleEssentialCheck}
-            num={i}
-            checked={essential[i]}
-            setAll={setAll}
-          />
-        ))}
-        <hr />
-        {selectableMentArray.map((v, i) => (
-          <Agreement
-            key={v}
-            type={"selectable"}
-            ment={v}
-            setCheck={handleSelectableCheck}
-            num={i}
-            checked={selectable[i]}
-            setAll={setAll}
-          />
-        ))}
-      </ul>
+      ))}
+      <hr />
+      {selectableMentArray.map((v, i) => (
+        <Agreement
+          key={v}
+          type={"selectable"}
+          ment={v}
+          setCheck={handleSelectableCheck}
+          num={i}
+          checked={selectable[i]}
+          setAll={setAll}
+        />
+      ))}
     </div>
   );
 }
