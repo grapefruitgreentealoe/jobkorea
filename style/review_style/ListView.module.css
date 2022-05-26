@@ -1,0 +1,15 @@
+.listview {
+  height: 80vh;
+  border: 1px black solid;
+
+}
+
+.listElements {
+   height: 80vh;
+  overflow-y: scroll;
+    position: relative;
+}
+.listElement {
+  display: grid;
+  grid-template-columns: 2fr 1fr 5fr 2fr 1fr;
+}

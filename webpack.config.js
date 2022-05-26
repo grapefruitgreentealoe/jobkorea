@@ -22,17 +22,6 @@ module.exports = {
           presets: ["@babel/preset-env", "@babel/preset-react"], // babel-loader에서 사용할 옵션
         },
       },
-      // {
-      //   test: /\.(sc|c)ss$/, // scss나 css인 확장자 파일
-      //   use: [
-      //     MiniCssExtractPlugin.loader, // js 파일에서 css 파일들을 분리한다.
-
-      //     "css-loader", //css 파일을 컴포넌트에서 import/require 하여 사용할 수 있도록 해준다.
-      //     "sass-loader", // Sass/SCSS 파일들을 css 파일로 컴파일해준다.
-      //     "style-loader", //변환된 CSS 파일을 <style> 태그로 감싸서 삽입
-      //   ], // 위 확장자의 파일을 읽을 loader들
-      // },
-      // CSS 모듈
       {
         test: /\.css$/, //css인 확장자 파일
         use: [
