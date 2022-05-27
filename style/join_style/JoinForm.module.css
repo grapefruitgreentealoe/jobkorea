@@ -1,10 +1,13 @@
 .joinform {
-  color: red;
   width: 500px;
   position: relative;
   display: block;
   font-size: xx-large;
-  padding: 3em 10px 0 10px;
+  padding: 0 10px 0 10px;
+}
+
+.joinform span {
+  font-size: 0.5em;
 }
 
 .joinInput {

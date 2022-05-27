@@ -5,6 +5,7 @@ export default function Filter({ setFilter, filter }) {
   const handleFilterButton = (e) => {
     e.preventDefault();
     setFilter(e.target.name);
+    setOpen(false);
   };
   const handleOpenButton = (e) => {
     e.preventDefault();

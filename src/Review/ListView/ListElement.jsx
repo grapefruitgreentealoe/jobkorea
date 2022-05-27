@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Result from "./Result";
 import ToggleableContent from "./TogglableContent";
 import ToggleButton from "./ToggleButton";
@@ -9,11 +9,13 @@ export default function ListElement({ filter }) {
   const url = "mockData.json";
   const data = useDataFetch(url);
   const [toggle, setToggle] = useState(Array(data.length).fill(false));
-
+  useEffect(() => {
+    setToggle(Array(data.length).fill(false));
+  }, [data]);
   return (
     <div className={styles.listElements}>
       {data
-        .filter((x) => (filter == "전체" ? x : x.result == filter))
+        ?.filter((x) => (filter == "전체" ? x : x.result == filter))
         .map(({ date, result, company, writer, content, count }, i) => (
           <div key={uuidv4()}>
             <div className={styles.listElement}>

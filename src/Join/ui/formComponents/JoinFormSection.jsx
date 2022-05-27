@@ -29,6 +29,7 @@ export default function JoinFormSection({
     <div className={style.joinform}>
       {formArray.map((x) => (
         <div key={x[0]}>
+          <span>{x[1]}</span>
           <JoinInput
             type={x[0]}
             placeholder={x[1]}
