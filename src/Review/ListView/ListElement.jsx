@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useMemo } from "react";
 import Result from "./Result";
 import ToggleableContent from "./TogglableContent";
 import ToggleButton from "./ToggleButton";
-import data from "../mockData.json";
 import styles from "../../../style/review_style/ListView.module.css";
 import { v4 as uuidv4 } from "uuid";
+import useDataFetch from "../../useHook/useDataFetch";
 export default function ListElement({ filter }) {
+  const url = "mockData.json";
+  const data = useDataFetch(url);
   const [toggle, setToggle] = useState(Array(data.length).fill(false));
+
   return (
     <div className={styles.listElements}>
       {data

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Filter from "./Review/Filter";
 import ListView from "./Review/ListView/ListView";
 import styles from "../style/review_style/ReviewPage.module.css";
-import { Link } from "react-router-dom";
 import UnderNavbar from "./UnderNavbar";
 
 export default function Review() {
