@@ -14,7 +14,11 @@ export default function Filter({ setFilter, filter }) {
   return (
     <div className={styles.filter}>
       <span>합격여부 필터</span>
-      <button onClick={handleOpenButton} className={styles.filterNow}>
+      <button
+        title="합격여부 필터"
+        onClick={handleOpenButton}
+        className={styles.filterNow}
+      >
         {filter}▼
       </button>
 
@@ -25,6 +29,7 @@ export default function Filter({ setFilter, filter }) {
               className={styles.filterSelect}
               name={x}
               onClick={handleFilterButton}
+              title={x}
             >
               {x}
             </button>

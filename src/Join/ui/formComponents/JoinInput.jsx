@@ -17,6 +17,7 @@ export default function JoinInput({
     <div className={style.joinInputNButton}>
       <input
         className={style.joinInput}
+        alt={placeholder}
         placeholder={placeholder}
         onChange={handleonChange}
         value={joinInfo[type]}

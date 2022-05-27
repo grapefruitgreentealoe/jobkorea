@@ -7,7 +7,7 @@ export default function ToggleButton({ setToggle, num }) {
   };
   return (
     <div className={styles.toggleButton}>
-      <button onClick={handleToggleButton}>
+      <button title="내용보기" onClick={handleToggleButton}>
         <span>⬇</span>
       </button>
     </div>

@@ -1,11 +1,10 @@
 .joinform {
   color: red;
   width: 500px;
-  height: 50vh;
   position: relative;
   display: block;
   font-size: xx-large;
-  padding: 12vh 10px 0 10px;
+  padding: 3em 10px 0 10px;
 }
 
 .joinInput {
@@ -30,6 +29,7 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  padding-top: 2em;
 }
 
 .visibleButton span {

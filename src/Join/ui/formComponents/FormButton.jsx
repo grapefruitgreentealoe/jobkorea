@@ -11,6 +11,7 @@ export default function FormButton({ buttonName }) {
         value={buttonName}
         className={style.joinButton}
         onClick={handleOnClick}
+        title={buttonName}
       >
         {buttonName}{" "}
       </button>

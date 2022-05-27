@@ -45,7 +45,7 @@ export default function AgreementSection({
 
   return (
     <div className={styles.agreements}>
-      <h3>약관동의</h3>
+      <h3 title="약관동의">약관동의</h3>
       <Agreement
         type={null}
         ment={allMent}

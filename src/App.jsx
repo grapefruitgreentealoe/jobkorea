@@ -14,11 +14,18 @@ export default function App() {
     >
       <nav>
         <Link to="/join">
-          <div style={{ border: "1px solid black", color: "black" }}>Join</div>
+          <div
+            style={{ border: "1px solid black", color: "black" }}
+            title="회원가입"
+          >
+            Join
+          </div>
         </Link>
 
         <Link to="/review">
-          <div style={{ border: "1px solid black", color: "black" }}>족보</div>
+          <div style={{ border: "1px solid black", color: "black" }}
+          title="족보"
+          >족보</div>
         </Link>
       </nav>
     </div>

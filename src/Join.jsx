@@ -27,7 +27,7 @@ export default function Join() {
     e.preventDefault();
     const validation = formValidation(joinInfo, essential, periodRadio);
     if (validation) {
-      console.log(joinInfo, essential, periodRadio);
+      console.log({ joinInfo, essential, selectable, period: periodRadio });
     }
   };
 

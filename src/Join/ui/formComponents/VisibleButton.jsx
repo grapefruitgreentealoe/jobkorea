@@ -8,7 +8,11 @@ export default function VisibleButton({ setVisible, visible }) {
   };
   return (
     <>
-      <button className={style.visibleButton} onClick={handleVisibleButton}>
+      <button
+        className={style.visibleButton}
+        onClick={handleVisibleButton}
+        title={visible == "password" ? "비밀번호 안보임" : "비밀번호 보임"}
+      >
         {visible == "text" ? <span>◉</span> : <span>⌣</span>}
       </button>
     </>
