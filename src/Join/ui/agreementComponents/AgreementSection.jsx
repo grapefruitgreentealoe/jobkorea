@@ -1,6 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
-
 import styles from "../../../../style/join_style/Agreement.module.css";
 import Agreement from "./Agreement";
 export default function AgreementSection({

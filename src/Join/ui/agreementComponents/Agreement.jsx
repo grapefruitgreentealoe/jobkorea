@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../../../../style/join_style/Agreement.module.css";
 export default function Agreement({ type, ment, setCheck, num, checked }) {
   const handleCheck = (e) => {
-    e.preventDefault();
     setCheck(e.target.name);
   };
   return (
