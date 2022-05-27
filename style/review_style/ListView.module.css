@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.listElement:hover{
+.listElement:hover {
   background-color: rgba(38, 126, 158, 0.507);
 }
 .reviewDetail {
@@ -46,4 +46,14 @@
   height: auto;
   padding: 1em;
   background-color: rgba(31, 107, 188, 0.636);
+}
+
+.passed {
+  padding: 0.3em;
+  background-color: rgba(113, 113, 238, 0.643);
+}
+
+.failed {
+  padding: 0.3em;
+  background-color: rgba(255, 0, 0, 0.323);
 }
