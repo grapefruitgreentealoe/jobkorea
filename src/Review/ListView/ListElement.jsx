@@ -12,17 +12,18 @@ export default function ListElement({ filter }) {
       {data
         .filter((x) => (filter == "전체" ? x : x.result == filter))
         .map(({ date, result, company, writer, content, count }, i) => (
-          <div key={uuidv4()} className={styles.listElement}>
-            <span>{date}</span>
-            <Result result={result} />
-            <div className={styles.reviewDetail}>
-              <span>{company}</span>
-              <ToggleButton num={i} setToggle={setToggle} />
+          <div key={uuidv4()}>
+            <div className={styles.listElement}>
+              <span>{date}</span>
+              <Result result={result} />
+              <div className={styles.reviewDetail}>
+                <span>{company}</span>
+                <ToggleButton num={i} setToggle={setToggle} />
+              </div>
+              <span>{writer}</span>
+              <span>{count}</span>
             </div>
-            <span>{writer}</span>
-            <span>{count}</span>
-
-            {toggle[i] && <ToggleableContent content={content} />}
+            <div>{toggle[i] && <ToggleableContent content={content} />}</div>
           </div>
         ))}
     </div>

@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../style/review_style/Filter.module.css";
-export default function Filter({ setFilter }) {
+export default function Filter({ setFilter, filter }) {
+  const [open, setOpen] = useState(false);
   const handleFilterButton = (e) => {
     e.preventDefault();
     setFilter(e.target.name);
   };
+  const handleOpenButton = (e) => {
+    e.preventDefault();
+    setOpen((o) => !o);
+  };
+  const resultArray = ["전체", "합격", "불합격"];
   return (
     <div className={styles.filter}>
-      <button name="전체" onClick={handleFilterButton}>
-        전체
+      <span>합격여부 필터</span>
+      <button onClick={handleOpenButton} className={styles.filterNow}>
+        {filter}▼
       </button>
-      <button name="합격" onClick={handleFilterButton}>
-        합격
-      </button>
-      <button name="불합격" onClick={handleFilterButton}>
-        불합격
-      </button>
+
+      {open &&
+        resultArray.map((x) => (
+          <div key={x}>
+            <button
+              className={styles.filterSelect}
+              name={x}
+              onClick={handleFilterButton}
+            >
+              {x}
+            </button>
+          </div>
+        ))}
     </div>
   );
 }
