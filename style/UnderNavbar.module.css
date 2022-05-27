@@ -1,0 +1,8 @@
+.underNavbar {
+  text-align: center;
+  margin-top: 1em;
+}
+.link {
+  display: inline-block;
+  padding-right: 1em;
+}

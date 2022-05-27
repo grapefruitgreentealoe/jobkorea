@@ -6,6 +6,7 @@ import PersonalInfoSection from "./Join/ui/PersonalInfoSection";
 import SubmitButton from "./Join/ui/SubmitButton";
 import formValidation from "./Join/formValidation/formValidation";
 import style from "../style/join_style/JoinPage.module.css";
+import UnderNavbar from "./UnderNavbar";
 export default function Join() {
   const [joinInfo, setJoinInfo] = useState({
     id: "",
@@ -31,29 +32,32 @@ export default function Join() {
   };
 
   return (
-    <div className={style.joinPage}>
-      <form id="joinForm" onSubmit={handleSubmitButton}>
-        <Navbar />
-        <JoinFormSection
-          joinInfo={joinInfo}
-          setJoinInfo={setJoinInfo}
-          visible={visible}
-          setVisible={setVisible}
-        />
-        <AgreementSection
-          all={all}
-          setAll={setAll}
-          essential={essential}
-          setEssential={setEssential}
-          selectable={selectable}
-          setSelectable={setSelectable}
-        />
-        <PersonalInfoSection
-          setPeriodRadio={setPeriodRadio}
-          periodRadio={periodRadio}
-        />
-        <SubmitButton />
-      </form>
+    <div>
+      <div className={style.joinPage}>
+        <form id="joinForm" onSubmit={handleSubmitButton}>
+          <Navbar />
+          <JoinFormSection
+            joinInfo={joinInfo}
+            setJoinInfo={setJoinInfo}
+            visible={visible}
+            setVisible={setVisible}
+          />
+          <AgreementSection
+            all={all}
+            setAll={setAll}
+            essential={essential}
+            setEssential={setEssential}
+            selectable={selectable}
+            setSelectable={setSelectable}
+          />
+          <PersonalInfoSection
+            setPeriodRadio={setPeriodRadio}
+            periodRadio={periodRadio}
+          />
+          <SubmitButton />
+        </form>
+      </div>
+      <UnderNavbar path="review" />
     </div>
   );
 }

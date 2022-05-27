@@ -1,0 +1,29 @@
+.filter {
+  height: 7em;
+  border: 1px black solid;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+.filter span {
+  display: block;
+  padding-top: 1em;
+}
+
+.filterNow {
+  border: 1px solid black;
+  width: 100px;
+  padding: 0.5em;
+  font-size: large;
+  background-color: rgb(26, 119, 212);
+  color: aliceblue;
+}
+
+.filterSelect {
+  position: relative;
+  border: 1px solid black;
+  width: 100px;
+  padding: 0.5em;
+  font-size: large;
+  background-color: white;
+}
