@@ -7,6 +7,7 @@ import SubmitButton from "./Join/ui/SubmitButton";
 import formValidation from "./Join/formValidation/formValidation";
 import style from "../style/join_style/JoinPage.module.css";
 import UnderNavbar from "./UnderNavbar";
+import enterKeyDown from "./evenfunction/enterKeyDown";
 export default function Join() {
   const [joinInfo, setJoinInfo] = useState({
     id: "",
@@ -30,6 +31,13 @@ export default function Join() {
       console.log({ joinInfo, essential, selectable, period: periodRadio });
     }
   };
+
+  useEffect(() => {
+    document.addEventListener("keydown", enterKeyDown, true);
+    return () => {
+      document.removeEventListener("keydown", enterKeyDown, true);
+    };
+  }, []);
 
   return (
     <div>
