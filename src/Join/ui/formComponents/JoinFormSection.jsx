@@ -3,8 +3,6 @@ import style from "../../../../style/join_style/JoinForm.module.css";
 import JoinInput from "./JoinInput";
 import VisibleButton from "./VisibleButton";
 import FormButton from "./FormButton";
-import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 export default function JoinFormSection({
   joinInfo,
