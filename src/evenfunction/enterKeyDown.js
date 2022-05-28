@@ -12,7 +12,11 @@ export default function (event) {
         formElements[index + 2].type == "password")
     ) {
       formElements[index + 2].focus();
-    } else if (eventTargetType == "text") {
+    } else if (
+      (eventTargetType == "text" || eventTargetType == "password") &&
+      (formElements[index + 1].type == "text" ||
+        formElements[index + 1].type == "password")
+    ) {
       formElements[index + 1].focus();
     }
   }
